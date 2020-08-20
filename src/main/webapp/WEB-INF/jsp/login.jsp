@@ -38,7 +38,7 @@
 						<img src="static/images/logo.png"></img>
 					</span>
 					<span class="login100-form-title p-b-49">
-						Login HI
+						Login
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
