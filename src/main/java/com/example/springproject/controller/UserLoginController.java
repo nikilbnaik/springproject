@@ -86,7 +86,7 @@ public class UserLoginController {
 
 	@RequestMapping(value="/", method = RequestMethod.GET)
     public String showVeiwUserDetails(ModelMap model){
-		return "login";
+		return "userRegistration";
     }
 	
 	@RequestMapping(value="/login", method = RequestMethod.GET)
