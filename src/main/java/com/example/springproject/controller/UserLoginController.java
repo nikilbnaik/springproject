@@ -86,7 +86,7 @@ public class UserLoginController {
 
 	@RequestMapping(value="/", method = RequestMethod.GET)
     public String showVeiwUserDetails(ModelMap model){
-		return "userRegistration";
+		return "login";
     }
 	
 	@RequestMapping(value="/login", method = RequestMethod.GET)
@@ -104,7 +104,7 @@ public class UserLoginController {
     public String addUserDetails(@ModelAttribute("user") User user) {
 		User newUser =  userLoginService.save(user);
 		if(newUser != null){
-			return "redirect:/login";
+			return "redirect:/welcome";
 		}else{
 			return "redirect:/userRegistration";
 		}
