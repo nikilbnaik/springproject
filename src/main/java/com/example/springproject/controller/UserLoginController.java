@@ -104,7 +104,7 @@ public class UserLoginController {
     public String addUserDetails(@ModelAttribute("user") User user) {
 		User newUser =  userLoginService.save(user);
 		if(newUser != null){
-			return "redirect:/welcome";
+			return "redirect:/login";
 		}else{
 			return "redirect:/userRegistration";
 		}
