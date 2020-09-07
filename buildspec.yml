@@ -1,13 +1,16 @@
 version: 0.2
 phases:
-  install:
-    runtime-versions:
-      java: corretto8
+  pre_build:
+    commands:
+    - echo "Entered the pre-build phase"
   build:
     commands:
-      - java -version
-      - mvn package
+    - echo "Entered build phase"
+    - mvn clean prepare-package war:exploded
+  post_build:
+    commands:
+    - echo "Entered the post-build phase"
+    - mv target/deploy ./
 artifacts:
   files:
-    - '**/*'
-  base-directory: 'target/springproject-0.0.1-SNAPSHOT'
+    - deploy/**/*
